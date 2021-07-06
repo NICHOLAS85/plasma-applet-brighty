@@ -35,9 +35,9 @@ Item {
     //
     // terminal commands
     // - commands
-    property string brightnessValue: '' + (currentBrightness * 0.01).toFixed(2)
-    property string changeBrightnessCommand: 'xrandr --output ' + monitor_name + ' --brightness ' + brightnessValue
-    property string mon_list_Command: "xrandr | grep \" connected \" | awk '{ print$1 }' "
+    property string brightnessValue: '' + currentBrightness.toFixed()
+    property string changeBrightnessCommand: 'sudo ddcutil --sn ' + monitor_name + ' setvcp 10 ' + brightnessValue
+    property string mon_list_Command: "sudo ddcutil detect | awk '/Serial number/{print $3}'"
 
     property var mon_list
     property ListModel items: ListModel {}

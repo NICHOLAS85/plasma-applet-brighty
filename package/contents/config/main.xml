@@ -7,6 +7,6 @@
 
     <group name="General">
         <entry name="manualBrightnessStep" type="Double">
-            <default>0.1</default>
+            <default>10</default>
         </entry>
 </kcfg>

@@ -19,7 +19,7 @@ Item {
 
 
     // x100 for better counting
-    property int brightnessIncrement: plasmoid.configuration.manualBrightnessStep * 100
+    property int brightnessIncrement: plasmoid.configuration.manualBrightnessStep
     property int brightnessMin: 10
     property int brightnessMax: 100
 
