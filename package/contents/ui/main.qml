@@ -36,8 +36,8 @@ Item {
     // terminal commands
     // - commands
     property string brightnessValue: '' + currentBrightness.toFixed()
-    property string changeBrightnessCommand: 'sudo ddcutil --sn ' + monitor_name + ' setvcp 10 ' + brightnessValue
-    property string mon_list_Command: "sudo ddcutil detect | awk '/Serial number/{print $3}'"
+    property string changeBrightnessCommand: 'ddcutil --sn ' + monitor_name + ' setvcp 10 ' + brightnessValue
+    property string mon_list_Command: "ddcutil detect | awk '/Serial number/{print $3}'"
 
     property var mon_list
     property ListModel items: ListModel {}
